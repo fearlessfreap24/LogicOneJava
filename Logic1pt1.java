@@ -79,13 +79,44 @@ public class Logic1pt1 {
 //    		System.out.printf("n = %d : %b\n", n, old35(n));
 //    	}
     	
-    	int[] nums12 = { 18, 19, 20 };
-    	for ( int n : nums12 ) {
-    		System.out.printf("n = %d : %b\n", n, less20(n));
+//    	int[] nums12 = { 18, 19, 20 };
+//    	for ( int n : nums12 ) {
+//    		System.out.printf("n = %d : %b\n", n, less20(n));
+//    	}
+    	
+//    	int[] nums13 = { 12, 17, 19 };
+//    	for ( int num : nums13 ) {
+//    		System.out.printf("num = %d : %b\n", num, nearTen(num));
+//    	}
+    	
+//    	int[][] nums14 = { {3, 4}, {10, 13}, {13, 2} };
+//    	for ( int[] nums : nums14 ) {
+//    		System.out.printf("a = %d, b = %d : %d\n", nums[0], nums[1],
+//    				teenSum(nums[0], nums[1]));
+//    	}
+    	
+    	boolean[][] bools15 = { {false, false, false}, {false, false, true}, 
+    			{true, false, false}, {true, true, true} };
+    	for ( boolean[] bools : bools15 ) {
+    		System.out.printf("isMorning = %b, isMom = %b, isAsleep = %b : %b\n", bools[0], bools[1], bools[2],
+    				answerCell(bools[0], bools[1], bools[2]));
     	}
     	
     	
     }
+
+	private boolean answerCell(boolean isMorning, boolean isMom, boolean isAsleep) {
+
+//		Your cell phone rings. Return true if you should answer it. Normally 
+//		you answer, 
+//		except in the morning you only answer if it is your mom calling. 
+//		In all cases, if you are asleep, you do not answer.
+//
+//		answerCell(false, false, false) → true
+//		answerCell(false, false, true) → false
+//		answerCell(true, false, false) → false
+		return ( isMorning && isMom && !isAsleep ) || ( !isMorning && !isAsleep );
+	}
 
 	private boolean cigarParty(int cigars, boolean isWeekend) {
 
@@ -278,5 +309,33 @@ public class Logic1pt1 {
 //		less20(19) → true
 //		less20(20) → false
 		return n % 20 == 18 || n % 20 == 19;
+	}
+
+	private boolean nearTen(int num) {
+
+//		Given a non-negative number "num", return true if num is within 
+//		2 of a multiple of 10. Note: (a % b) is the remainder of dividing 
+//		a by b, so (7 % 5) is 2. See also: Introduction to Mod
+//
+//		nearTen(12) → true
+//		nearTen(17) → false
+//		nearTen(19) → true
+		return ( num % 10  >= 0 && num % 10 <= 2 ) 
+				|| ( num % 10 == 8 || num % 10 == 9 );
+	}
+
+	private int teenSum(int a, int b) {
+
+//		Given 2 ints, a and b, return their sum. However, "teen" values 
+//		in the range 13..19 inclusive, are extra lucky. So if either value 
+//		is a teen, just return 19.
+//
+//		teenSum(3, 4) → 7
+//		teenSum(10, 13) → 19
+//		teenSum(13, 2) → 19
+		int sum = a + b;
+		if ( a >= 13 && a <= 19 ) return 19;
+		if ( b >= 13 && b <= 19 ) return 19;
+		return sum;
 	}
 }
