@@ -44,12 +44,32 @@ public class Logic1pt1 {
 //    				sortaSum(nums[0], nums[1]));
 //    	}
     	
-    	int[] nums6 = { 1, 5, 0 };
-    	boolean[] bools6 = { false, false, false };
-    	for ( int i = 0; i < nums6.length; i++ ) {
-    		System.out.printf("day = %d, vacation = %b : %s\n", nums6[i], bools6[i],
-    				alarmClock(nums6[i], bools6[i]));
+//    	int[] nums6 = { 1, 5, 0 };
+//    	boolean[] bools6 = { false, false, false };
+//    	for ( int i = 0; i < nums6.length; i++ ) {
+//    		System.out.printf("day = %d, vacation = %b : %s\n", nums6[i], bools6[i],
+//    				alarmClock(nums6[i], bools6[i]));
+//    	}
+    	
+//    	int[][] nums7 = { {6, 4}, {4, 5}, {1, 5}, {-7, 1}, {-2, -4}, {1, 7} };
+//    	for ( int[] nums : nums7 ) {
+//    		System.out.printf("a = %d, b = %d : %b\n", nums[0], nums[1],
+//    				love6(nums[0], nums[1]));
+//    	}
+    	
+//    	int[] nums8 = { 5, 11, 11, 0 };
+//    	boolean[] bools8 = { false, false, true, false };
+//    	for ( int i = 0; i < nums8.length; i++ ) {
+//    		System.out.printf("n = %d, outside = %b : %b\n", nums8[i], bools8[i],
+//    				in1to10(nums8[i], bools8[i]));
+//    	}
+    	
+    	int[] nums9 = { 22, 23, 24 };
+    	for ( int n : nums9 ) {
+    		System.out.printf("n = %d : %b\n", n, specialEleven(n));
     	}
+    	
+    	
     }
 
 	private boolean cigarParty(int cigars, boolean isWeekend) {
@@ -164,5 +184,49 @@ public class Logic1pt1 {
 		}
 		if ( vacation ) return "10:00";
 		return "7:00";
+	}
+
+	private boolean love6(int a, int b) {
+
+
+//		The number 6 is a truly great number. Given two int values, 
+//		a and b, return true if either one is 6. Or if their sum or 
+//		difference is 6. Note: the function Math.abs(num) computes 
+//		the absolute value of a number.
+//
+//
+//		love6(6, 4) → true
+//		love6(4, 5) → false
+//		love6(1, 5) → true
+		return a == 6 || b == 6 || a + b == 6 || a - b == 6
+				|| b + a == 6 || b - a == 6;
+	}
+
+	private boolean in1to10(int n, boolean outsideMode) {
+
+//		Given a number n, return true if n is in the range 1..10, inclusive. 
+//		Unless outsideMode is true, in which case return true if 
+//		the number is less or equal to 1, or greater or equal to 10.
+//
+//
+//		in1To10(5, false) → true
+//		in1To10(11, false) → false
+//		in1To10(11, true) → true
+		
+		return ( n >= 1 && n <= 10 && !outsideMode )
+				|| ( (n <= 1 || n >= 10) && outsideMode );
+	}
+
+	private boolean specialEleven(int n) {
+
+//		We'll say a number is special if it is a multiple of 11 or if it 
+//		is one more than a multiple of 11. Return true if the given 
+//		non-negative number is special. Use the % "mod" operator -- see 
+//		Introduction to Mod
+//
+//		specialEleven(22) → true
+//		specialEleven(23) → true
+//		specialEleven(24) → false
+		return n % 11 == 0 || n % 11 == 1;
 	}
 }
