@@ -64,9 +64,24 @@ public class Logic1pt1 {
 //    				in1to10(nums8[i], bools8[i]));
 //    	}
     	
-    	int[] nums9 = { 22, 23, 24 };
-    	for ( int n : nums9 ) {
-    		System.out.printf("n = %d : %b\n", n, specialEleven(n));
+//    	int[] nums9 = { 22, 23, 24 };
+//    	for ( int n : nums9 ) {
+//    		System.out.printf("n = %d : %b\n", n, specialEleven(n));
+//    	}
+    	
+//    	int[] nums10 = { 20, 21, 22 };
+//    	for ( int n : nums10 ) {
+//    		System.out.printf("n = %d : %b\n", n, more20(n));
+//    	}
+    	
+//    	int[] nums11 = { 3, 10, 15 };
+//    	for ( int n : nums11 ) {
+//    		System.out.printf("n = %d : %b\n", n, old35(n));
+//    	}
+    	
+    	int[] nums12 = { 18, 19, 20 };
+    	for ( int n : nums12 ) {
+    		System.out.printf("n = %d : %b\n", n, less20(n));
     	}
     	
     	
@@ -228,5 +243,40 @@ public class Logic1pt1 {
 //		specialEleven(23) → true
 //		specialEleven(24) → false
 		return n % 11 == 0 || n % 11 == 1;
+	}
+
+	private boolean more20(int n) {
+
+//		Return true if the given non-negative number is 1 or 2 more than a 
+//		multiple of 20. See also: Introduction to Mod
+//
+//		more20(20) → false
+//		more20(21) → true
+//		more20(22) → true
+		return n % 20 == 1 || n % 20 == 2;
+	}
+
+	private boolean old35(int n) {
+
+//		Return true if the given non-negative number is a multiple of 3 
+//		or 5, but not both. Use the % "mod" operator -- see Introduction 
+//		to Mod
+//
+//		old35(3) → true
+//		old35(10) → true
+//		old35(15) → false
+		return ( n % 3 == 0 || n % 5 == 0 ) && !( n % 3 == 0 && n % 5 == 0 );
+	}
+
+	private boolean less20(int n) {
+
+//		Return true if the given non-negative number is 1 or 2 less 
+//		than a multiple of 20. So for example 38 and 39 return true, 
+//		but 40 returns false. See also: Introduction to Mod
+//
+//		less20(18) → true
+//		less20(19) → true
+//		less20(20) → false
+		return n % 20 == 18 || n % 20 == 19;
 	}
 }
