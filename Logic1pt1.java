@@ -7,10 +7,11 @@ public class Logic1pt1 {
 
     public static void main(String[] args) {
         Logic1pt1 start = new Logic1pt1();
-        start.run();
+        Methods m = new Methods();
+        start.run(m);
     }
 
-    private void run() {
+    private void run(Methods m) {
 
 //        int[] nums1 = { 30, 50, 70 };
 //        boolean[] bools1 = { false, false, true };
@@ -95,28 +96,31 @@ public class Logic1pt1 {
 //    				teenSum(nums[0], nums[1]));
 //    	}
     	
-    	boolean[][] bools15 = { {false, false, false}, {false, false, true}, 
-    			{true, false, false}, {true, true, true} };
-    	for ( boolean[] bools : bools15 ) {
-    		System.out.printf("isMorning = %b, isMom = %b, isAsleep = %b : %b\n", bools[0], bools[1], bools[2],
-    				answerCell(bools[0], bools[1], bools[2]));
+//    	boolean[][] bools15 = { {false, false, false}, {false, false, true}, 
+//    			{true, false, false}, {true, true, true} };
+//    	for ( boolean[] bools : bools15 ) {
+//    		System.out.printf("isMorning = %b, isMom = %b, isAsleep = %b : %b\n", bools[0], bools[1], bools[2],
+//    				answerCell(bools[0], bools[1], bools[2]));
+//    	}
+    	
+//    	int[][] nums16 = { {6, 8}, {3, 8}, {20, 6} };
+//    	for ( int[] nums : nums16 ) {
+//    		System.out.printf("tea = %d, candy = %d : %d\n", nums[0], nums[1],
+//    				m.teaParty(nums[0], nums[1]));
+//    	}
+    	
+//    	String[] strs17 = { "fig", "dib", "fib" };
+//    	for ( String str : strs17 ) {
+//    		System.out.printf("str = %s : %s\n", str, m.fizzString(str));
+//    	}
+    	
+    	int[] nums18 = { 1, 2, 3 };
+    	for ( int n : nums18 ) {
+    		System.out.printf("n = %d : %s\n", n, m.fizzString2(n));
     	}
     	
     	
     }
-
-	private boolean answerCell(boolean isMorning, boolean isMom, boolean isAsleep) {
-
-//		Your cell phone rings. Return true if you should answer it. Normally 
-//		you answer, 
-//		except in the morning you only answer if it is your mom calling. 
-//		In all cases, if you are asleep, you do not answer.
-//
-//		answerCell(false, false, false) → true
-//		answerCell(false, false, true) → false
-//		answerCell(true, false, false) → false
-		return ( isMorning && isMom && !isAsleep ) || ( !isMorning && !isAsleep );
-	}
 
 	private boolean cigarParty(int cigars, boolean isWeekend) {
 
@@ -337,5 +341,18 @@ public class Logic1pt1 {
 		if ( a >= 13 && a <= 19 ) return 19;
 		if ( b >= 13 && b <= 19 ) return 19;
 		return sum;
+	}
+
+	private boolean answerCell(boolean isMorning, boolean isMom, boolean isAsleep) {
+
+//		Your cell phone rings. Return true if you should answer it. Normally 
+//		you answer, 
+//		except in the morning you only answer if it is your mom calling. 
+//		In all cases, if you are asleep, you do not answer.
+//
+//		answerCell(false, false, false) → true
+//		answerCell(false, false, true) → false
+//		answerCell(true, false, false) → false
+		return ( isMorning && isMom && !isAsleep ) || ( !isMorning && !isAsleep );
 	}
 }
