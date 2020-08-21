@@ -114,9 +114,29 @@ public class Logic1pt1 {
 //    		System.out.printf("str = %s : %s\n", str, m.fizzString(str));
 //    	}
     	
-    	int[] nums18 = { 1, 2, 3 };
-    	for ( int n : nums18 ) {
-    		System.out.printf("n = %d : %s\n", n, m.fizzString2(n));
+//    	int[] nums18 = { 1, 2, 3 };
+//    	for ( int n : nums18 ) {
+//    		System.out.printf("n = %d : %s\n", n, m.fizzString2(n));
+//    	}
+    	
+//    	int[][] nums19 = { {1, 2, 3}, {3, 1, 2}, {3, 2, 2} };
+//    	for ( int[]nums : nums19 ) {
+//    		System.out.printf("a = %d, b = %d, c = %d : %b\n", nums[0], nums[1], nums[2],
+//    				m.twoAsOne(nums[0], nums[1], nums[2]));
+//    	}
+    	
+//    	int[][] nums20 = { {1, 2, 4}, {1, 2, 1}, {1, 1, 2} };
+//    	boolean[] bools20 = { false, false, true };
+//    	for ( int i = 0; i < nums20.length; i++ ) {
+//    		System.out.printf("a = %d, b = %d, c = %d, b0k = %b : %b\n", nums20[i][0], nums20[i][1],
+//    				nums20[i][2], bools20[i], m.inOrder(nums20[i][0], nums20[i][1], nums20[i][2], bools20[i]));
+//    	}
+    	
+    	int[][] nums21 = { {2, 5, 11}, {5, 7, 6}, {5, 5, 7} };
+    	boolean[] bools21 = { false, false, true };
+    	for ( int i = 0; i < nums21.length; i++ ) {
+    		System.out.printf("a = %d, b = %d, c = %d, equalOk = %b : %b\n", nums21[i][0], nums21[i][1], nums21[i][2],
+    				bools21[i], m.inOrderEqual(nums21[i][0], nums21[i][1], nums21[i][2], bools21[i]));
     	}
     	
     	
