@@ -132,11 +132,28 @@ public class Logic1pt1 {
 //    				nums20[i][2], bools20[i], m.inOrder(nums20[i][0], nums20[i][1], nums20[i][2], bools20[i]));
 //    	}
     	
-    	int[][] nums21 = { {2, 5, 11}, {5, 7, 6}, {5, 5, 7} };
-    	boolean[] bools21 = { false, false, true };
-    	for ( int i = 0; i < nums21.length; i++ ) {
-    		System.out.printf("a = %d, b = %d, c = %d, equalOk = %b : %b\n", nums21[i][0], nums21[i][1], nums21[i][2],
-    				bools21[i], m.inOrderEqual(nums21[i][0], nums21[i][1], nums21[i][2], bools21[i]));
+//    	int[][] nums21 = { {2, 5, 11}, {5, 7, 6}, {5, 5, 7} };
+//    	boolean[] bools21 = { false, false, true };
+//    	for ( int i = 0; i < nums21.length; i++ ) {
+//    		System.out.printf("a = %d, b = %d, c = %d, equalOk = %b : %b\n", nums21[i][0], nums21[i][1], nums21[i][2],
+//    				bools21[i], m.inOrderEqual(nums21[i][0], nums21[i][1], nums21[i][2], bools21[i]));
+//    	}
+    	
+//    	int[][] nums22 = { {23,19,13}, {23,19,12}, {23,19,3} };
+//    	for ( int[] nums : nums22 ) {
+//    		System.out.printf("a = %d, b = %d, c = %d : %b\n", nums[0], nums[1], nums[2], m.lastDigit(nums[0], nums[1], nums[2]));
+//    	}
+    	
+//    	int[][] nums23 = { {1, 7, 11}, {1, 7, 10}, {11, 1, 7} };
+//    	for (int[] nums : nums23) {
+//    		System.out.printf("a = %d, b = %d, c = %d : %b\n", nums[0], nums[1], nums[2], m.lessBy10(nums[0], nums[1], nums[2]));
+//    	}
+    	
+    	int[][] nums24 = { {2, 3}, {3, 3}, {3, 3} };
+    	boolean[] bools = { true, true, false };
+    	for ( int i = 0; i < bools.length; i ++ ) {
+    		System.out.printf("die1 = %d, die2 = %d, noDoubles = %b : %d\n", nums24[i][0], nums24[i][1], bools[i],
+    				m.withoutDoubles(nums24[i][0], nums24[i][1], bools[i]));
     	}
     	
     	

@@ -101,5 +101,62 @@ public class Methods {
 		boolean bceq = c >= b;
 		return ( ab && bc && !equalOk ) || ( abeq && bceq && equalOk );
 	}
+	
+	public boolean lastDigit(int a, int b, int c) {
+		
+//		Given three ints, a b c, return true if two or more of them have the same rightmost 
+//		digit. The ints are non-negative. Note: the % "mod" operator computes the remainder, 
+//		e.g. 17 % 10 is 7.
+//
+//		lastDigit(23, 19, 13) → true
+//		lastDigit(23, 19, 12) → false
+//		lastDigit(23, 19, 3) → true
+		
+		String strA = Integer.toString(a);
+		String strB = Integer.toString(b);
+		String strC = Integer.toString(c);
+		
+		if (strA.substring(strA.length()-1).equals(strB.substring(strB.length()-1))) return true;
+		if (strA.substring(strA.length()-1).equals(strC.substring(strC.length()-1))) return true;
+		if (strC.substring(strC.length()-1).equals(strB.substring(strB.length()-1))) return true;
+		
+		return false;
+	}
+
+	public boolean lessBy10(int a, int b, int c) {
+		
+//		Given three ints, a b c, return true if one of them is 10 or more less than one of the others.
+//
+//		lessBy10(1, 7, 11) → true
+//		lessBy10(1, 7, 10) → false
+//		lessBy10(11, 1, 7) → true
+		
+		if ((a <= b-10) || (a <= c-10)) return true;
+		if ((b <= a-10) || (b <= c-10)) return true;
+		if ((c <= a-10) || (c <= b-10)) return true;
+		
+		return  false;
+	}
+
+	public int withoutDoubles(int die1, int die2, boolean noDoubles) {
+		
+//		Return the sum of two 6-sided dice rolls, each in the range 1..6. However, if noDoubles is true, 
+//		if the two dice show the same value, increment one die to the next value, wrapping around to 1 if 
+//		its value was 6.
+//
+//		withoutDoubles(2, 3, true) → 5
+//		withoutDoubles(3, 3, true) → 7
+//		withoutDoubles(3, 3, false) → 6
+		
+		if (noDoubles) {
+			if ( die1 == die2 ) {
+				if (die1 == 6) {
+					return 1 + die2;
+				}
+				return die1+die2+1;
+			}
+		}
+		return die1+die2;
+	}
 
 }
