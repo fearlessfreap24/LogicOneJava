@@ -149,11 +149,16 @@ public class Logic1pt1 {
 //    		System.out.printf("a = %d, b = %d, c = %d : %b\n", nums[0], nums[1], nums[2], m.lessBy10(nums[0], nums[1], nums[2]));
 //    	}
     	
-    	int[][] nums24 = { {2, 3}, {3, 3}, {3, 3} };
-    	boolean[] bools = { true, true, false };
-    	for ( int i = 0; i < bools.length; i ++ ) {
-    		System.out.printf("die1 = %d, die2 = %d, noDoubles = %b : %d\n", nums24[i][0], nums24[i][1], bools[i],
-    				m.withoutDoubles(nums24[i][0], nums24[i][1], bools[i]));
+//    	int[][] nums24 = { {2, 3}, {3, 3}, {3, 3} };
+//    	boolean[] bools = { true, true, false };
+//    	for ( int i = 0; i < bools.length; i ++ ) {
+//    		System.out.printf("die1 = %d, die2 = %d, noDoubles = %b : %d\n", nums24[i][0], nums24[i][1], bools[i],
+//    				m.withoutDoubles(nums24[i][0], nums24[i][1], bools[i]));
+//    	}
+    	
+    	int[][] nums25 = { {2, 3}, {6, 2}, {3, 2} };
+    	for (int[] nums : nums25) {
+    		System.out.printf("a = %d, b = %d : %d\n", nums[0], nums[1], m.maxMod(nums[0], nums[1]));
     	}
     	
     	

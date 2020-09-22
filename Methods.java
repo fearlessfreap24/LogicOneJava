@@ -1,162 +1,400 @@
+//package bat.coding.one.logic;
 
-public class Methods {
+//Basic boolean logic puzzles -- if else && || !.
 
-	public int teaParty(int tea, int candy) {
 
-//		We are having a party with amounts of tea and candy. Return 
-//		the int outcome of the party encoded as 
-//		0=bad, 
-//		1=good, or 
-//		2=great. 
-//		A party is good (1) if both tea and candy are at least 5. 
-//		However, if either tea or candy is at least double the amount 
-//		of the other one, the party is great (2). However, in all cases, 
-//		if either tea or candy is less than 5, the party is always bad (0).
+public class Logic1pt1 {
+
+    public static void main(String[] args) {
+        Logic1pt1 start = new Logic1pt1();
+        Methods m = new Methods();
+        start.run(m);
+    }
+
+    private void run(Methods m) {
+
+//        int[] nums1 = { 30, 50, 70 };
+//        boolean[] bools1 = { false, false, true };
+//        for ( int i = 0; i < nums1.length; i++ ){
+//            System.out.printf("cigars = %d, isWeekend = %b : %b\n", nums1[i], bools1[i],
+//                    cigarParty(nums1[i], bools1[i]));
+//        }
+
+//        int[][] nums2 = { {5, 10}, {5, 2}, {5, 5} };
+//        for ( int[] nums : nums2 ){
+//            System.out.printf("you = %d, date = %d : %d\n", nums[0], nums[1], dateFashion(nums[0], nums[1]));
+//        }
+    	
+//    	int[] nums3 = { 70, 95, 95 };
+//    	boolean[] bools3 = { false, false, true };
+//    	for ( int i = 0; i < nums3.length; i++ ) {
+//    		System.out.printf("temp = %d, isSummer = %b : %b\n", nums3[i], bools3[i],
+//    				squirrelPlay(nums3[i], bools3[i]));
+//    	}
+    	
+//    	int[] nums4 = { 60, 65, 65 };
+//    	boolean[] bools4 = { false, false, true };
+//    	for ( int i = 0; i < nums4.length; i++ ) {
+//    		System.out.printf("speed = %d, isBirthday = %b : %d\n", nums4[i], bools4[i],
+//    				caughtSpeeding(nums4[i], bools4[i]));
+//    	}
+    	
+//    	int[][] nums5 = { {3, 4}, {9, 4}, {10, 11} };
+//    	for ( int[] nums : nums5 ) {
+//    		System.out.printf("a = %d, b = %d : %d\n", nums[0], nums[1],
+//    				sortaSum(nums[0], nums[1]));
+//    	}
+    	
+//    	int[] nums6 = { 1, 5, 0 };
+//    	boolean[] bools6 = { false, false, false };
+//    	for ( int i = 0; i < nums6.length; i++ ) {
+//    		System.out.printf("day = %d, vacation = %b : %s\n", nums6[i], bools6[i],
+//    				alarmClock(nums6[i], bools6[i]));
+//    	}
+    	
+//    	int[][] nums7 = { {6, 4}, {4, 5}, {1, 5}, {-7, 1}, {-2, -4}, {1, 7} };
+//    	for ( int[] nums : nums7 ) {
+//    		System.out.printf("a = %d, b = %d : %b\n", nums[0], nums[1],
+//    				love6(nums[0], nums[1]));
+//    	}
+    	
+//    	int[] nums8 = { 5, 11, 11, 0 };
+//    	boolean[] bools8 = { false, false, true, false };
+//    	for ( int i = 0; i < nums8.length; i++ ) {
+//    		System.out.printf("n = %d, outside = %b : %b\n", nums8[i], bools8[i],
+//    				in1to10(nums8[i], bools8[i]));
+//    	}
+    	
+//    	int[] nums9 = { 22, 23, 24 };
+//    	for ( int n : nums9 ) {
+//    		System.out.printf("n = %d : %b\n", n, specialEleven(n));
+//    	}
+    	
+//    	int[] nums10 = { 20, 21, 22 };
+//    	for ( int n : nums10 ) {
+//    		System.out.printf("n = %d : %b\n", n, more20(n));
+//    	}
+    	
+//    	int[] nums11 = { 3, 10, 15 };
+//    	for ( int n : nums11 ) {
+//    		System.out.printf("n = %d : %b\n", n, old35(n));
+//    	}
+    	
+//    	int[] nums12 = { 18, 19, 20 };
+//    	for ( int n : nums12 ) {
+//    		System.out.printf("n = %d : %b\n", n, less20(n));
+//    	}
+    	
+//    	int[] nums13 = { 12, 17, 19 };
+//    	for ( int num : nums13 ) {
+//    		System.out.printf("num = %d : %b\n", num, nearTen(num));
+//    	}
+    	
+//    	int[][] nums14 = { {3, 4}, {10, 13}, {13, 2} };
+//    	for ( int[] nums : nums14 ) {
+//    		System.out.printf("a = %d, b = %d : %d\n", nums[0], nums[1],
+//    				teenSum(nums[0], nums[1]));
+//    	}
+    	
+//    	boolean[][] bools15 = { {false, false, false}, {false, false, true}, 
+//    			{true, false, false}, {true, true, true} };
+//    	for ( boolean[] bools : bools15 ) {
+//    		System.out.printf("isMorning = %b, isMom = %b, isAsleep = %b : %b\n", bools[0], bools[1], bools[2],
+//    				answerCell(bools[0], bools[1], bools[2]));
+//    	}
+    	
+//    	int[][] nums16 = { {6, 8}, {3, 8}, {20, 6} };
+//    	for ( int[] nums : nums16 ) {
+//    		System.out.printf("tea = %d, candy = %d : %d\n", nums[0], nums[1],
+//    				m.teaParty(nums[0], nums[1]));
+//    	}
+    	
+//    	String[] strs17 = { "fig", "dib", "fib" };
+//    	for ( String str : strs17 ) {
+//    		System.out.printf("str = %s : %s\n", str, m.fizzString(str));
+//    	}
+    	
+//    	int[] nums18 = { 1, 2, 3 };
+//    	for ( int n : nums18 ) {
+//    		System.out.printf("n = %d : %s\n", n, m.fizzString2(n));
+//    	}
+    	
+//    	int[][] nums19 = { {1, 2, 3}, {3, 1, 2}, {3, 2, 2} };
+//    	for ( int[]nums : nums19 ) {
+//    		System.out.printf("a = %d, b = %d, c = %d : %b\n", nums[0], nums[1], nums[2],
+//    				m.twoAsOne(nums[0], nums[1], nums[2]));
+//    	}
+    	
+//    	int[][] nums20 = { {1, 2, 4}, {1, 2, 1}, {1, 1, 2} };
+//    	boolean[] bools20 = { false, false, true };
+//    	for ( int i = 0; i < nums20.length; i++ ) {
+//    		System.out.printf("a = %d, b = %d, c = %d, b0k = %b : %b\n", nums20[i][0], nums20[i][1],
+//    				nums20[i][2], bools20[i], m.inOrder(nums20[i][0], nums20[i][1], nums20[i][2], bools20[i]));
+//    	}
+    	
+//    	int[][] nums21 = { {2, 5, 11}, {5, 7, 6}, {5, 5, 7} };
+//    	boolean[] bools21 = { false, false, true };
+//    	for ( int i = 0; i < nums21.length; i++ ) {
+//    		System.out.printf("a = %d, b = %d, c = %d, equalOk = %b : %b\n", nums21[i][0], nums21[i][1], nums21[i][2],
+//    				bools21[i], m.inOrderEqual(nums21[i][0], nums21[i][1], nums21[i][2], bools21[i]));
+//    	}
+    	
+//    	int[][] nums22 = { {23,19,13}, {23,19,12}, {23,19,3} };
+//    	for ( int[] nums : nums22 ) {
+//    		System.out.printf("a = %d, b = %d, c = %d : %b\n", nums[0], nums[1], nums[2], m.lastDigit(nums[0], nums[1], nums[2]));
+//    	}
+    	
+//    	int[][] nums23 = { {1, 7, 11}, {1, 7, 10}, {11, 1, 7} };
+//    	for (int[] nums : nums23) {
+//    		System.out.printf("a = %d, b = %d, c = %d : %b\n", nums[0], nums[1], nums[2], m.lessBy10(nums[0], nums[1], nums[2]));
+//    	}
+    	
+//    	int[][] nums24 = { {2, 3}, {3, 3}, {3, 3} };
+//    	boolean[] bools = { true, true, false };
+//    	for ( int i = 0; i < bools.length; i ++ ) {
+//    		System.out.printf("die1 = %d, die2 = %d, noDoubles = %b : %d\n", nums24[i][0], nums24[i][1], bools[i],
+//    				m.withoutDoubles(nums24[i][0], nums24[i][1], bools[i]));
+//    	}
+    	
+    	int[][] nums25 = { {2, 3}, {6, 2}, {3, 2} };
+    	for (int[] nums : nums25) {
+    		System.out.printf("a = %d, b = %d : %d\n", nums[0], nums[1], m.maxMod(nums[0], nums[1]));
+    	}
+    	
+    	
+    }
+
+	private boolean cigarParty(int cigars, boolean isWeekend) {
+
+//        When squirrels get together for a party, they like to
+//        have cigars. A squirrel party is successful when the
+//        number of cigars is between 40 and 60, inclusive. Unless
+//        it is the weekend, in which case there is no upper bound
+//        on the number of cigars. Return true if the party with the
+//        given values is successful, or false otherwise.
 //
-//		teaParty(6, 8) → 1
-//		teaParty(3, 8) → 0
-//		teaParty(20, 6) → 2
-		if ( tea < 5 || candy < 5 ) return 0;
-		if ( tea >= 5 && candy >= tea * 2 ) return 2;
-		if ( candy >= 5 && tea >= candy * 2 ) return 2;
-		return 1;
+//        cigarParty(30, false) → false
+//        cigarParty(50, false) → true
+//        cigarParty(70, true) → true
+        if ( isWeekend ){
+            return cigars >= 40;
+        }
+        else return cigars >= 40 && cigars <= 60;
+    }
+
+    private int dateFashion(int you, int date) {
+
+//        You and your date are trying to get a table at a restaurant.
+//        The parameter "you" is the stylishness of your clothes, in
+//        the range 0..10, and "date" is the stylishness of your date's
+//        clothes. The result getting the table is encoded as an int value
+//        with 0=no, 1=maybe, 2=yes. If either of you is very stylish, 8
+//        or more, then the result is 2 (yes). With the exception that if
+//        either of you has style of 2 or less, then the result is 0 (no).
+//        Otherwise the result is 1 (maybe).
+//
+//        dateFashion(5, 10) → 2
+//        dateFashion(5, 2) → 0
+//        dateFashion(5, 5) → 1
+        if ( you <= 2 || date <= 2 ){
+            return 0;
+        }
+        if ( you > 2 && you < 8 && date > 2 && date < 8 ){
+            return 1;
+        }
+        return 2;
+    }
+
+    private boolean squirrelPlay(int temp, boolean isSummer) {
+
+//    	The squirrels in Palo Alto spend most of the day playing. 
+//    	In particular, they play if the temperature is between 60 
+//    	and 90 (inclusive). Unless it is summer, then the upper 
+//    	limit is 100 instead of 90. Given an int temperature and a 
+//    	boolean isSummer, return true if the squirrels play and false 
+//    	otherwise.
+//
+//		squirrelPlay(70, false) → true
+//		squirrelPlay(95, false) → false
+//		squirrelPlay(95, true) → true
+		
+    	return (temp >= 60 && temp <= 90 && !isSummer) 
+    			|| ( temp >= 60 && temp <= 100 && isSummer ); 
 	}
 
-	public String fizzString(String str) {
+	private int caughtSpeeding(int speed, boolean isBirthday) {
 
-//		Given a string str, if the string starts with "f" return "Fizz". If 
-//		the string ends with "b" return "Buzz". If both the "f" and "b" 
-//		conditions are true, return "FizzBuzz". In all other cases, return 
-//		the string unchanged. (See also: FizzBuzz Code)
+//		You are driving a little too fast, and a police officer stops 
+//		you. Write code to compute the result, encoded as an int value: 
+//		0=no ticket, 1=small ticket, 2=big ticket. If speed is 60 or less, 
+//		the result is 0. If speed is between 61 and 80 inclusive, the 
+//		result is 1. If speed is 81 or more, the result is 2. Unless it is 
+//		your birthday -- on that day, your speed can be 5 higher in all cases.
 //
-//		fizzString("fig") → "Fizz"
-//		fizzString("dib") → "Buzz"
-//		fizzString("fib") → "FizzBuzz"
-		if ( str.length() == 0 ) return str;
-		String[] strSplit = str.split("");
-		if ( strSplit[0].equals("f") && strSplit[strSplit.length - 1].equals("b") ) {
-			return "FizzBuzz";
+//		caughtSpeeding(60, false) → 0
+//		caughtSpeeding(65, false) → 1
+//		caughtSpeeding(65, true) → 0
+		int ticket = 0;
+		if ( isBirthday ) speed -= 5;
+		if ( speed > 60 && speed <= 80 ) ticket = 1;
+		if ( speed > 80 ) ticket = 2;
+		return ticket;
+		
+	}
+
+	private int sortaSum(int a, int b) {
+
+//		Given 2 ints, a and b, return their sum. However, sums in 
+//		the range 10..19 inclusive, are forbidden, so in that case 
+//		just return 20.
+//
+//		sortaSum(3, 4) → 7
+//		sortaSum(9, 4) → 20
+//		sortaSum(10, 11) → 21
+		
+		int sortasum = a + b;
+		if ( sortasum >= 10 && sortasum <= 19 ) return 20;
+		return sortasum;
+	}
+
+	private String alarmClock(int day, boolean vacation) {
+
+//		Given a day of the week encoded as 0=Sun, 1=Mon, 2=Tue, ...
+//		6=Sat, and a boolean indicating if we are on vacation, return 
+//		a string of the form "7:00" indicating when the alarm clock 
+//		should ring. Weekdays, the alarm should be "7:00" and on the 
+//		weekend it should be "10:00". Unless we are on vacation -- then 
+//		on weekdays it should be "10:00" and weekends it should be "off".
+//
+//
+//		alarmClock(1, false) → "7:00"
+//		alarmClock(5, false) → "7:00"
+//		alarmClock(0, false) → "10:00"
+		if ( day == 0 || day == 6 ) {
+			if ( vacation ) return "off";
+			return "10:00";
 		}
-		if ( strSplit[0].equals("f") ) return "Fizz";
-		if ( strSplit[strSplit.length - 1].equals("b") ) return "Buzz";
-		return str;
+		if ( vacation ) return "10:00";
+		return "7:00";
 	}
 
-	public String fizzString2(int n) {
+	private boolean love6(int a, int b) {
 
-//		Given an int n, return the string form of the number followed by "!". So 
-//		the int 6 yields "6!". Except if the number is divisible by 3 use "Fizz" 
-//		instead of the number, and if the number is divisible by 5 use "Buzz", and 
-//		if divisible by both 3 and 5, use "FizzBuzz". Note: the % "mod" operator 
-//		computes the remainder after division, so 23 % 10 yields 3. What will the 
-//		remainder be when one number divides evenly into another? (See also: FizzBuzz 
-//		Code and Introduction to Mod)
+
+//		The number 6 is a truly great number. Given two int values, 
+//		a and b, return true if either one is 6. Or if their sum or 
+//		difference is 6. Note: the function Math.abs(num) computes 
+//		the absolute value of a number.
 //
-//		fizzString2(1) → "1!"
-//		fizzString2(2) → "2!"
-//		fizzString2(3) → "Fizz!"
-		if ( n % 3 == 0 && n % 5 == 0 ) return "FizzBuzz!";
-		if ( n % 3 == 0 ) return "Fizz!";
-		if ( n % 5 == 0 ) return "Buzz!";
-		return Integer.toString(n) + "!";
-	}
-
-	public boolean twoAsOne(int a, int b, int c) {
-
-//		Given three ints, a b c, return true if it is possible to add two of the ints to 
-//		get the third.
 //
-//		twoAsOne(1, 2, 3) → true
-//		twoAsOne(3, 1, 2) → true
-//		twoAsOne(3, 2, 2) → false
-		return ( a + b == c || a + c == b || b + c == a );
+//		love6(6, 4) → true
+//		love6(4, 5) → false
+//		love6(1, 5) → true
+		return a == 6 || b == 6 || a + b == 6 || a - b == 6
+				|| b + a == 6 || b - a == 6;
 	}
 
-	public boolean inOrder(int a, int b, int c, boolean bOk) {
+	private boolean in1to10(int n, boolean outsideMode) {
 
-//		Given three ints, a b c, return true if b is greater than a, and c is greater than 
-//		b. However, with the exception that if "bOk" is true, b does not need to be greater 
-//		than a.		
+//		Given a number n, return true if n is in the range 1..10, inclusive. 
+//		Unless outsideMode is true, in which case return true if 
+//		the number is less or equal to 1, or greater or equal to 10.
 //
-//		inOrder(1, 2, 4, false) → true
-//		inOrder(1, 2, 1, false) → false
-//		inOrder(1, 1, 2, true) → true
-		boolean ab = b > a;
-		boolean bc = c > b;
-		return ( ab && bc && !bOk ) || ( bc && bOk );
-	}
-
-	public boolean inOrderEqual(int a, int b, int c, boolean equalOk) {
-
-//		Given three ints, a b c, return true if they are in strict increasing order, such as 
-//		2 5 11, or 5 6 7, but not 6 5 7 or 5 5 7. However, with the exception that if "equalOk" 
-//		is true, equality is allowed, such as 5 5 7 or 5 5 5.
 //
-//		inOrderEqual(2, 5, 11, false) → true
-//		inOrderEqual(5, 7, 6, false) → false
-//		inOrderEqual(5, 5, 7, true) → true
-		boolean ab = b > a;
-		boolean bc = c > b;
-		boolean abeq = b >= a;
-		boolean bceq = c >= b;
-		return ( ab && bc && !equalOk ) || ( abeq && bceq && equalOk );
-	}
-	
-	public boolean lastDigit(int a, int b, int c) {
+//		in1To10(5, false) → true
+//		in1To10(11, false) → false
+//		in1To10(11, true) → true
 		
-//		Given three ints, a b c, return true if two or more of them have the same rightmost 
-//		digit. The ints are non-negative. Note: the % "mod" operator computes the remainder, 
-//		e.g. 17 % 10 is 7.
-//
-//		lastDigit(23, 19, 13) → true
-//		lastDigit(23, 19, 12) → false
-//		lastDigit(23, 19, 3) → true
-		
-		String strA = Integer.toString(a);
-		String strB = Integer.toString(b);
-		String strC = Integer.toString(c);
-		
-		if (strA.substring(strA.length()-1).equals(strB.substring(strB.length()-1))) return true;
-		if (strA.substring(strA.length()-1).equals(strC.substring(strC.length()-1))) return true;
-		if (strC.substring(strC.length()-1).equals(strB.substring(strB.length()-1))) return true;
-		
-		return false;
+		return ( n >= 1 && n <= 10 && !outsideMode )
+				|| ( (n <= 1 || n >= 10) && outsideMode );
 	}
 
-	public boolean lessBy10(int a, int b, int c) {
-		
-//		Given three ints, a b c, return true if one of them is 10 or more less than one of the others.
+	private boolean specialEleven(int n) {
+
+//		We'll say a number is special if it is a multiple of 11 or if it 
+//		is one more than a multiple of 11. Return true if the given 
+//		non-negative number is special. Use the % "mod" operator -- see 
+//		Introduction to Mod
 //
-//		lessBy10(1, 7, 11) → true
-//		lessBy10(1, 7, 10) → false
-//		lessBy10(11, 1, 7) → true
-		
-		if ((a <= b-10) || (a <= c-10)) return true;
-		if ((b <= a-10) || (b <= c-10)) return true;
-		if ((c <= a-10) || (c <= b-10)) return true;
-		
-		return  false;
+//		specialEleven(22) → true
+//		specialEleven(23) → true
+//		specialEleven(24) → false
+		return n % 11 == 0 || n % 11 == 1;
 	}
 
-	public int withoutDoubles(int die1, int die2, boolean noDoubles) {
-		
-//		Return the sum of two 6-sided dice rolls, each in the range 1..6. However, if noDoubles is true, 
-//		if the two dice show the same value, increment one die to the next value, wrapping around to 1 if 
-//		its value was 6.
+	private boolean more20(int n) {
+
+//		Return true if the given non-negative number is 1 or 2 more than a 
+//		multiple of 20. See also: Introduction to Mod
 //
-//		withoutDoubles(2, 3, true) → 5
-//		withoutDoubles(3, 3, true) → 7
-//		withoutDoubles(3, 3, false) → 6
-		
-		if (noDoubles) {
-			if ( die1 == die2 ) {
-				if (die1 == 6) {
-					return 1 + die2;
-				}
-				return die1+die2+1;
-			}
-		}
-		return die1+die2;
+//		more20(20) → false
+//		more20(21) → true
+//		more20(22) → true
+		return n % 20 == 1 || n % 20 == 2;
 	}
 
+	private boolean old35(int n) {
+
+//		Return true if the given non-negative number is a multiple of 3 
+//		or 5, but not both. Use the % "mod" operator -- see Introduction 
+//		to Mod
+//
+//		old35(3) → true
+//		old35(10) → true
+//		old35(15) → false
+		return ( n % 3 == 0 || n % 5 == 0 ) && !( n % 3 == 0 && n % 5 == 0 );
+	}
+
+	private boolean less20(int n) {
+
+//		Return true if the given non-negative number is 1 or 2 less 
+//		than a multiple of 20. So for example 38 and 39 return true, 
+//		but 40 returns false. See also: Introduction to Mod
+//
+//		less20(18) → true
+//		less20(19) → true
+//		less20(20) → false
+		return n % 20 == 18 || n % 20 == 19;
+	}
+
+	private boolean nearTen(int num) {
+
+//		Given a non-negative number "num", return true if num is within 
+//		2 of a multiple of 10. Note: (a % b) is the remainder of dividing 
+//		a by b, so (7 % 5) is 2. See also: Introduction to Mod
+//
+//		nearTen(12) → true
+//		nearTen(17) → false
+//		nearTen(19) → true
+		return ( num % 10  >= 0 && num % 10 <= 2 ) 
+				|| ( num % 10 == 8 || num % 10 == 9 );
+	}
+
+	private int teenSum(int a, int b) {
+
+//		Given 2 ints, a and b, return their sum. However, "teen" values 
+//		in the range 13..19 inclusive, are extra lucky. So if either value 
+//		is a teen, just return 19.
+//
+//		teenSum(3, 4) → 7
+//		teenSum(10, 13) → 19
+//		teenSum(13, 2) → 19
+		int sum = a + b;
+		if ( a >= 13 && a <= 19 ) return 19;
+		if ( b >= 13 && b <= 19 ) return 19;
+		return sum;
+	}
+
+	private boolean answerCell(boolean isMorning, boolean isMom, boolean isAsleep) {
+
+//		Your cell phone rings. Return true if you should answer it. Normally 
+//		you answer, 
+//		except in the morning you only answer if it is your mom calling. 
+//		In all cases, if you are asleep, you do not answer.
+//
+//		answerCell(false, false, false) → true
+//		answerCell(false, false, true) → false
+//		answerCell(true, false, false) → false
+		return ( isMorning && isMom && !isAsleep ) || ( !isMorning && !isAsleep );
+	}
 }
