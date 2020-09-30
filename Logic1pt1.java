@@ -156,10 +156,10 @@ public class Logic1pt1 {
 //    				m.withoutDoubles(nums24[i][0], nums24[i][1], bools[i]));
 //    	}
     	
-//    	int[][] nums25 = { {2, 3}, {6, 2}, {3, 2} };
-//    	for (int[] nums : nums25) {
-//    		System.out.printf("a = %d, b = %d : %d\n", nums[0], nums[1], m.maxMod(nums[0], nums[1]));
-//    	}
+    	int[][] nums25 = { {2, 3}, {6, 2}, {3, 2} };
+    	for (int[] nums : nums25) {
+    		System.out.printf("a = %d, b = %d : %d\n", nums[0], nums[1], m.maxMod(nums[0], nums[1]));
+    	}
     	
 //    	int[][] nums26 = { {2, 2, 2}, {2, 2, 1}, {0, 0, 0} };
 //    	for (int[] nums : nums26) {
@@ -185,11 +185,11 @@ public class Logic1pt1 {
 //    				m.shareDigit(nums [0], nums[1]));
 //    	}
     	
-    	int[][] nums30 = { {2, 3}, {8, 3}, {8, 1}, {11, 39}, {123, 1} };
-    	for ( int[] nums : nums30 ) {
-    		System.out.printf("a = %d, b = %d : %d\n", nums[0], nums[1],
-    				m.sumLimit(nums[0], nums[1]));
-    	}
+//    	int[][] nums30 = { {2, 3}, {8, 3}, {8, 1}, {11, 39}, {123, 1} };
+//    	for ( int[] nums : nums30 ) {
+//    		System.out.printf("a = %d, b = %d : %d\n", nums[0], nums[1],
+//    				m.sumLimit(nums[0], nums[1]));
+//    	}
     	
     	
     }
