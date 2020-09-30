@@ -156,9 +156,39 @@ public class Logic1pt1 {
 //    				m.withoutDoubles(nums24[i][0], nums24[i][1], bools[i]));
 //    	}
     	
-    	int[][] nums25 = { {2, 3}, {6, 2}, {3, 2} };
-    	for (int[] nums : nums25) {
-    		System.out.printf("a = %d, b = %d : %d\n", nums[0], nums[1], m.maxMod(nums[0], nums[1]));
+//    	int[][] nums25 = { {2, 3}, {6, 2}, {3, 2} };
+//    	for (int[] nums : nums25) {
+//    		System.out.printf("a = %d, b = %d : %d\n", nums[0], nums[1], m.maxMod(nums[0], nums[1]));
+//    	}
+    	
+//    	int[][] nums26 = { {2, 2, 2}, {2, 2, 1}, {0, 0, 0} };
+//    	for (int[] nums : nums26) {
+//    		System.out.printf("a = %d, b = %d, c = %d : %d\n", nums[0], nums[1], nums[2],
+//    				m.redTicket(nums[0], nums[1], nums[2]));
+//    	}
+    	
+//    	int[][] nums27 = { {1, 2, 3}, {2, 2, 2}, {1, 1, 2}, {1, 2, 1}, {0, 10, 0} };
+//    	for ( int[] nums : nums27 ) {
+//    		System.out.printf("a = %d, b = %d, c = %d : %d\n", nums[0], nums[1], nums[2],
+//    				m.greenTicket(nums[0], nums[1], nums[2]));
+//    	}
+    	
+//    	int[][] nums28 = { {9, 1, 0}, {9, 2, 0}, {6, 1, 4}, {15, 0, 5}, {4, 11, 1}, {13, 2, 3} };
+//    	for ( int[]nums : nums28 ) {
+//    		System.out.printf("a = %d, b = %d, c = %d : %d\n", nums[0], nums[1], nums[2],
+//    				m.blueTicket(nums[0], nums[1], nums[2]));
+//    	}
+    	
+//    	int[][] nums29 = { {12, 23}, {12, 43}, {12, 44} };
+//    	for ( int[] nums : nums29 ) {
+//    		System.out.printf("a = %d, b = %d : %b\n", nums [0], nums[1],
+//    				m.shareDigit(nums [0], nums[1]));
+//    	}
+    	
+    	int[][] nums30 = { {2, 3}, {8, 3}, {8, 1}, {11, 39}, {123, 1} };
+    	for ( int[] nums : nums30 ) {
+    		System.out.printf("a = %d, b = %d : %d\n", nums[0], nums[1],
+    				m.sumLimit(nums[0], nums[1]));
     	}
     	
     	
